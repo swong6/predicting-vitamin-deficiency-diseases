@@ -59,16 +59,30 @@ Can we accurately predict the likelihood of vitamin deficiency diseases based on
 - Optimized for macro F1-score (multi-class fairness)
 - **Test Accuracy: 99.25%** – Excellent classification across all disease categories
 
+## Feature Importance & Key Predictors
+
+![Key Predictors](images/key-predictors.png)
+
+**Top Drivers of Disease Classification:**
+- **Symptoms count (0.377)** – The strongest predictor; symptom severity directly correlates with disease type
+- **Vitamin D intake (0.346)** – Dietary vitamin D levels are highly influential in predictions
+- **Sun exposure (0.081)** – Low sun exposure contributes meaningfully to deficiency risk
+- **Vitamin B12 intake (0.074)** – Micronutrient levels consistently contribute to predictions
+- **Demographics (age: 0)** – Age shows negligible importance, indicating disease affects all age groups equally
+
+**Insight:** Clinical symptoms and dietary intake are far more predictive than demographics, validating a data-driven approach to early detection.
+
 ## Key Insights
 - ✅ **CART model significantly outperforms logistic regression** (99.25% vs 93.1% accuracy)
 - ✅ **Data quality is critical**: Proper handling of outliers and missing values directly improved model performance
-- ✅ **Demographic, dietary, and clinical variables are strong predictors** of vitamin deficiency diseases
+- ✅ **Symptoms and dietary factors drive predictions** – More so than age or demographics
 - ✅ **Early detection is possible**: High accuracy enables proactive healthcare interventions
 
 ## Business Impact
 - **Improved Diagnosis**: 99.25% accuracy enables confident early detection of vitamin deficiency diseases
 - **Healthcare Efficiency**: Automated risk screening can support triage and resource allocation
 - **Patient Outcomes**: Early intervention reduces severity and improves treatment efficacy
+- **Actionable Insights**: Feature importance reveals which factors (symptoms, diet) should be prioritized in screening protocols
 
 ## Deliverables
 - **Jupyter Notebook** – Complete analysis, data cleaning, modeling, and evaluation workflow
@@ -78,9 +92,9 @@ Can we accurately predict the likelihood of vitamin deficiency diseases based on
 ## Files
 | File | Description |
 |------|-------------|
-| `Vitamin Deficiency w_ RQ.ipynb` | Complete analysis notebook with EDA, feature engineering, and modeling |
+| `Data_Cleaning_Analysis.ipynb` | Complete analysis notebook with EDA, feature engineering, and modeling |
 | `Vitamin Deficiency Project Slides.pdf` | Executive presentation with visualizations and recommendations |
-| `vitamin_deficiency_disease_dataset_20260123.csv` | Source dataset (4,000 patients with demographics, lifestyle, diet, lab values, symptoms) |
+| `vitamin_deficiency_disease_dataset.csv` | Source dataset (4,000 patients with demographics, lifestyle, diet, lab values, symptoms) |
 | `images/` | Supporting visualizations from the analysis |
 | `README.md` | This file |
 
